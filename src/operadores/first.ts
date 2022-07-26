@@ -7,7 +7,7 @@ const mouse$ = fromEvent<MouseEvent>(document,'click');
 const first$ = mouse$.pipe(
     tap(console.log),
     map(({ clientX, clientY}) => ({ clientX, clientY}) ),
-    first(event => event.clientY >= 150) // Si cumple se completa Observable
+    first(event => event.clientY >= 150)
 );
 
 first$.subscribe({
