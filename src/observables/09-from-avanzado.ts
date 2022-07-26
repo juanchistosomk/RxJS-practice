@@ -14,7 +14,7 @@ of$.subscribe(observer)
 const from$ = from(fetch('https://api.github.com/users/klerith'));
 
 from$.subscribe( async(resp) => {
-    /// resp.json() retorna una Promesa , por lo se uasa async y await
+    /// resp.json() retorna una Promesa , por lo se usa async y await
     const data = await resp.json()
     console.log(data);
 
